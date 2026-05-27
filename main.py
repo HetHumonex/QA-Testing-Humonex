@@ -6,6 +6,7 @@ Runs as a single long-running process:
   - Uptime monitor : every 5 minutes, state kept in memory
 """
 
+import json
 import logging
 import os
 import sys
@@ -30,8 +31,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger("humonex-scheduler")
 
-# Uptime state in memory — no file needed on Railway's ephemeral filesystem
-_uptime: dict = {}
+LOG_DIR    = Path(__file__).parent / "logs"
+STATE_FILE = LOG_DIR / "uptime_state.json"
 
 
 def _discord(content):
@@ -47,6 +48,20 @@ def _discord(content):
         logger.error(f"Discord send failed: {e}")
 
 
+def _load_state():
+    try:
+        data = json.loads(STATE_FILE.read_text())
+        data["since"] = datetime.fromisoformat(data["since"])
+        return data
+    except Exception:
+        return {}
+
+
+def _save_state(status, since):
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    STATE_FILE.write_text(json.dumps({"status": status, "since": since.isoformat()}))
+
+
 def check_uptime():
     now     = datetime.now()
     now_str = now.strftime("%Y-%m-%d %H:%M")
@@ -57,14 +72,15 @@ def check_uptime():
     except Exception:
         current = "down"
 
-    if not _uptime:
-        # First check — record baseline, no alert
-        _uptime["status"] = current
-        _uptime["since"]  = now
+    state = _load_state()
+
+    if not state:
+        # First ever run — record baseline, no alert
+        _save_state(current, now)
         logger.info(f"Uptime baseline recorded: site is {current}")
         return
 
-    prev = _uptime["status"]
+    prev = state["status"]
     if current == prev:
         logger.info(f"Uptime check: site is {current} (no change)")
         return
@@ -78,7 +94,7 @@ def check_uptime():
             f"Check your Railway dashboard or hosting logs."
         )
     else:
-        minutes = max(1, int((now - _uptime["since"]).total_seconds() / 60))
+        minutes = max(1, int((now - state["since"]).total_seconds() / 60))
         msg = (
             f"🟢  **Website is back UP — Humonex**\n"
             f"Back online at **{now_str} IST**\n"
@@ -87,8 +103,7 @@ def check_uptime():
 
     _discord(msg)
     logger.info(f"Uptime changed: {prev} → {current}")
-    _uptime["status"] = current
-    _uptime["since"]  = now
+    _save_state(current, now)
 
 
 def run_qa():
