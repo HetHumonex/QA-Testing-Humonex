@@ -1,0 +1,153 @@
+2026-05-26 09:59:32,482 | INFO | Starting QA test for https://app.humonex.com
+2026-05-26 09:59:47,791 | INFO | Result: success=True, failed_step=None
+2026-05-26 12:43:27,131 | INFO | Starting Humonex full QA test → https://app.humonex.com
+2026-05-26 12:43:29,491 | INFO | ✅  Logging in to the app
+2026-05-26 12:43:36,600 | INFO | AI → The dashboard appears to be a mockup or placeholder, as it displays no real content, statistics, or data, and instead features placeholder text and icons.
+2026-05-26 12:43:36,601 | INFO | ✅  Loading the Dashboard
+2026-05-26 12:43:38,159 | INFO | ✅  Opening Tara Chat (Filling page)
+2026-05-26 12:43:47,438 | INFO | AI → Tara did not respond with task status information, and there is no new message in the chat.
+2026-05-26 12:43:47,440 | INFO | ✅  Asking Tara: Check task status
+2026-05-26 12:43:57,719 | INFO | AI → The image shows that Tara has not responded with a summary, and there is no new message. The chat window is empty, indicating that Tara has not sent any messages or summaries.
+2026-05-26 12:43:57,720 | INFO | ✅  Asking Tara: Dashboard summary
+2026-05-26 12:44:09,035 | INFO | AI → Tara acknowledged the download by sending a message that reads, "I'll notify you when it's done!"
+2026-05-26 12:44:09,037 | INFO | ✅  Starting GSTR2B download via Tara Chat
+2026-05-26 12:44:09,037 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 12:44:17,094 | INFO | Poll → COMPLETED
+2026-05-26 12:44:17,095 | INFO | Chat activity: COMPLETED
+
+The most recent 'GSTR2B' task is marked as completed, with a timestamp of 03:19 pm and 1/1 clients.
+2026-05-26 12:44:17,095 | INFO | ✅  Confirming Chat-triggered task appeared in Activity
+2026-05-26 12:44:21,040 | INFO | ✅  Opening Compilance page
+2026-05-26 12:44:38,069 | ERROR | ❌  Selecting client and setting download parameters: Locator.wait_for: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("tr:has-text(\"Itechnotion\") input[type=\"checkbox\"], [role=\"row\"]:has-text(\"Itechnotion\") input[type=\"checkbox\"], [role=\"row\"]:has-text(\"Itechnotion\") [role=\"checkbox\"]").first to be visible
+
+2026-05-26 12:44:38,069 | ERROR |     AI: The screen displays a client selection page with a search bar and a list of clients, but there is no error message or unexpected content visible. The "Download Parameters" section appears to be incomplete, with some fields not filled in, which may indicate an issue with the previous step.
+2026-05-26 12:44:38,158 | INFO | Test complete — success=False, passed=8/15, duration=1m 9s
+2026-05-26 13:41:56,267 | INFO | Starting Humonex full QA test → https://app.humonex.com
+2026-05-26 13:41:58,634 | INFO | ✅  Logging in to the app
+2026-05-26 13:42:04,711 | INFO | AI → The dashboard appears to be a mockup or placeholder, as it displays placeholder text and lacks actual data or statistics.
+2026-05-26 13:42:04,712 | INFO | ✅  Loading the Dashboard
+2026-05-26 13:42:05,727 | INFO | ✅  Opening Tara Chat (Filling page)
+2026-05-26 13:42:14,476 | INFO | AI → The screenshot shows that Tara has not responded with task status information, and there is no new message from her.
+2026-05-26 13:42:14,477 | INFO | ✅  Asking Tara: Check task status
+2026-05-26 13:42:24,815 | INFO | AI → The image shows that Tara did not respond with a summary, and there is no new message. The chat window is empty, indicating that Tara has not sent any messages or summaries.
+2026-05-26 13:42:24,817 | INFO | ✅  Asking Tara: Dashboard summary
+2026-05-26 13:42:34,756 | INFO | AI → Tara acknowledged the download and confirmed the task started by sending a message that reads, "I'll notify you when it's done!"
+2026-05-26 13:42:34,757 | INFO | ✅  Starting GSTR2B download via Tara Chat
+2026-05-26 13:42:34,757 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 13:42:42,837 | INFO | Poll → COMPLETED
+2026-05-26 13:42:42,838 | INFO | Chat activity: COMPLETED
+
+The most recent 'GSTR2B' task, triggered at 13:42:28, is marked as completed.
+2026-05-26 13:42:42,838 | INFO | ✅  Confirming Chat-triggered task appeared in Activity
+2026-05-26 13:42:46,789 | INFO | ✅  Opening Compilance page
+2026-05-26 13:42:47,355 | INFO | ✅  Selecting client and setting download parameters
+2026-05-26 13:42:52,773 | ERROR | ❌  Starting manual GSTR2B download from Compilance: Locator.wait_for: state: expected one of (attached|detached|visible|hidden)
+2026-05-26 13:42:52,774 | ERROR |     AI: The screen displays a list of clients with their respective details, including client name, username, type, and filing status. Notably, there is no error message or blank area visible on the screen; instead, it appears to be a normal client list view.
+2026-05-26 13:42:52,870 | INFO | Test complete — success=False, passed=9/15, duration=55s
+2026-05-26 13:46:10,468 | INFO | Starting Humonex full QA test → https://app.humonex.com
+2026-05-26 13:46:12,890 | INFO | ✅  Logging in to the app
+2026-05-26 13:46:19,317 | INFO | AI → The dashboard appears to be showing real content, including a message from Tara and various task and client information, but it also displays an error message indicating that the system is not functioning properly.
+2026-05-26 13:46:19,318 | INFO | ✅  Loading the Dashboard
+2026-05-26 13:46:20,536 | INFO | ✅  Opening Tara Chat (Filling page)
+2026-05-26 13:46:29,218 | INFO | AI → Tara did not respond with task status information, and there is no new message in the chat.
+2026-05-26 13:46:29,220 | INFO | ✅  Asking Tara: Check task status
+2026-05-26 13:46:40,611 | INFO | AI → There is no new message from Tara, and the chat window remains empty.
+2026-05-26 13:46:40,612 | INFO | ✅  Asking Tara: Dashboard summary
+2026-05-26 13:46:51,835 | INFO | AI → Tara acknowledged the download and confirmed the task started with the message, "I'll notify you when it's done!"
+2026-05-26 13:46:51,836 | INFO | ✅  Starting GSTR2B download via Tara Chat
+2026-05-26 13:46:51,836 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 13:47:00,559 | INFO | Poll → COMPLETED
+2026-05-26 13:47:00,561 | INFO | Chat activity: COMPLETED
+
+The most recent 'GSTR2B' task is marked as completed, with a timestamp of 04:59 pm and 2/2 clients successfully processed.
+2026-05-26 13:47:00,561 | INFO | ✅  Confirming Chat-triggered task appeared in Activity
+2026-05-26 13:47:04,547 | INFO | ✅  Opening Compilance page
+2026-05-26 13:47:05,134 | INFO | ✅  Selecting client and setting download parameters
+2026-05-26 13:47:12,048 | INFO | AI → There is a progress indicator in the Notifications panel that says "GSTR2B Download Started" with a blue circle and a white clock icon, indicating that the download has started.
+2026-05-26 13:47:12,048 | INFO | ✅  Starting manual GSTR2B download from Compilance
+2026-05-26 13:47:12,048 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 13:47:23,339 | INFO | Poll → FAILED
+2026-05-26 13:47:23,340 | INFO | Compilance activity: FAILED
+
+The most recent 'GSTR2B' task is marked as failed, with a red "X" symbol next to it and the text "GSTR2B failed - 1/1 clients failed" in the top-right corner of the screen.
+2026-05-26 13:47:23,341 | INFO | ✅  Confirming Compilance-triggered task appeared in Activity
+2026-05-26 13:47:32,771 | INFO | AI → This page appears to be normal and functional, with a clear layout and visible data. The page displays a user's overview, including their name, role, and tasks, as well as a list of recent activity and failed tasks. There are no visible errors or broken elements on the page.
+2026-05-26 13:47:32,772 | INFO | ✅  Checking Tara Overview page
+2026-05-26 13:47:40,352 | INFO | AI → The page appears to be functional, with a table displaying tasks and a red error message in the top-right corner indicating that "GSTR2B failed - 1/1 clients failed".
+2026-05-26 13:47:40,353 | INFO | ✅  Checking Tasks page
+2026-05-26 13:47:48,411 | INFO | AI → The page appears to be functional, displaying a list of clients with their respective details, but it is not fully populated, as only one client is visible.
+2026-05-26 13:47:48,412 | INFO | ✅  Checking Clients page
+2026-05-26 13:47:55,855 | INFO | AI → The page appears to be normal and functional, with a prominent blue button labeled "Start New Session" and a brief description of the reconciliation process. The page does not display any error messages or broken elements, suggesting that it is functioning as intended.
+2026-05-26 13:47:55,856 | INFO | ✅  Checking Bulk Reconciliation page
+2026-05-26 13:47:55,957 | INFO | Test complete — success=True, passed=15/15, duration=1m 44s
+2026-05-26 15:21:29,823 | INFO | Starting Humonex full QA test → https://app.humonex.com
+2026-05-26 15:21:33,557 | INFO | ✅  Logging in to the app
+2026-05-26 15:21:47,498 | INFO | AI → The dashboard appears to be a mockup or placeholder, as it displays placeholder text and lacks actual data or statistics.
+2026-05-26 15:21:47,498 | INFO | ✅  Loading the Dashboard
+2026-05-26 15:21:49,004 | INFO | ✅  Opening Tara Chat (Filling page)
+2026-05-26 15:21:57,775 | INFO | AI → Tara did not respond with task status information, and there is no new message in the chat.
+2026-05-26 15:21:57,776 | INFO | ✅  Asking Tara: Check task status
+2026-05-26 15:22:08,028 | INFO | AI → The image shows a chat window with a message from Tara, but it does not contain a summary. The message reads "Message Tara..." and there is no new message or summary provided by Tara.
+2026-05-26 15:22:08,029 | INFO | ✅  Asking Tara: Dashboard summary
+2026-05-26 15:22:19,522 | INFO | AI → Tara acknowledged the download by sending a message that reads, "I'll notify you when it's done!"
+2026-05-26 15:22:19,524 | INFO | ✅  Starting GSTR2B download via Tara Chat
+2026-05-26 15:22:19,524 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 15:22:27,277 | INFO | Poll → COMPLETED
+2026-05-26 15:22:27,278 | INFO | Chat activity: COMPLETED
+
+The most recent 'GSTR2B' task is marked as completed, with a timestamp of 01:47 pm and 1/1 clients.
+2026-05-26 15:22:27,278 | INFO | ✅  Confirming Chat-triggered task appeared in Activity
+2026-05-26 15:22:31,252 | INFO | ✅  Opening Compilance page
+2026-05-26 15:22:31,853 | INFO | ✅  Selecting client and setting download parameters
+2026-05-26 15:22:39,162 | INFO | AI → There is a progress indicator in the form of a blue circle with a white arrow inside it, located next to the "GSTR2B Download Started" notification.
+2026-05-26 15:22:39,166 | INFO | ✅  Starting manual GSTR2B download from Compilance
+2026-05-26 15:22:39,166 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 15:22:48,675 | INFO | Poll → COMPLETED
+2026-05-26 15:22:48,675 | INFO | Compilance activity: COMPLETED
+
+The most recent 'GSTR2B' task is marked as completed, with a timestamp of 01:47 pm and a status indicator showing a green checkmark.
+2026-05-26 15:22:48,675 | INFO | ✅  Confirming Compilance-triggered task appeared in Activity
+2026-05-26 15:22:56,506 | INFO | AI → The page appears to be normal and functional, with a clear layout and visible data. The page is not blank, broken, or showing an error.
+2026-05-26 15:22:56,508 | INFO | ✅  Checking Tara Overview page
+2026-05-26 15:23:09,435 | INFO | AI → The page appears to be functional, displaying a table with columns for tasks, frequency, schedule, next run, last run, status, active, and actions. The table contains two rows of data, indicating that the page is populated with information. There are no visible error messages or broken elements on the page.
+2026-05-26 15:23:09,436 | INFO | ✅  Checking Tasks page
+2026-05-26 15:23:21,961 | INFO | AI → The page appears to be functional, with a list of clients displayed in a table format. The table includes columns for client name, tally name, username, type, filing, and actions, and there is one client listed: Kanwarlal Gishulal Shah. The page also features various buttons and menus, such as "Add client," "Import," and "Sample Template," which suggest that the page is intended for managing client data. Overall, the page looks normal and functional, with no visible errors or broken elements.
+2026-05-26 15:23:21,963 | INFO | ✅  Checking Clients page
+2026-05-26 15:23:30,365 | INFO | AI → The page appears to be normal and functional, with a prominent blue button labeled "Start New Session" and a brief description of the reconciliation process. The page does not display any error messages or broken elements, suggesting that it is functioning as intended.
+2026-05-26 15:23:30,366 | INFO | ✅  Checking Bulk Reconciliation page
+2026-05-26 15:23:30,453 | INFO | Test complete — success=True, passed=15/15, duration=1m 59s
+2026-05-26 16:28:23,464 | INFO | Starting Humonex full QA test → https://app.humonex.com
+2026-05-26 16:28:26,123 | INFO | ✅  Logging in to the app
+2026-05-26 16:28:35,134 | INFO | AI → The dashboard shows a mix of real content and placeholder text, with some sections displaying actual data and others showing generic text like "Ask Tara" and "Download GSTR2B for all clients".
+2026-05-26 16:28:35,135 | INFO | ✅  Loading the Dashboard
+2026-05-26 16:28:36,781 | INFO | ✅  Opening Tara Chat (Filling page)
+2026-05-26 16:29:12,453 | INFO | AI → The screenshot shows that Tara has not responded with task status information, and there is no new message from her.
+2026-05-26 16:29:12,453 | INFO | ✅  Asking Tara: Check task status
+2026-05-26 16:29:26,231 | INFO | AI → The image shows a screenshot of the Humonex web app, with a chat window open and a message from Tara that reads "Message Tara..." in the text box. There is no summary or new message from Tara. The chat window is empty except for the default text in the text box.
+2026-05-26 16:29:26,233 | INFO | ✅  Asking Tara: Dashboard summary
+2026-05-26 16:29:37,387 | INFO | AI → Tara acknowledged the download by stating, "GSTR2B for April 2026-27 is already downloaded for all 1 client(s)!"
+2026-05-26 16:29:37,389 | INFO | ✅  Starting GSTR2B download via Tara Chat
+2026-05-26 16:29:37,389 | INFO | Polling /activity for 'GSTR2B' (max 120s, every 15s) …
+2026-05-26 16:29:45,274 | INFO | Poll → COMPLETED
+2026-05-26 16:29:45,274 | INFO | Chat activity: COMPLETED
+
+The most recent 'GSTR2B' task is marked as completed, with a timestamp of 01:47 pm and a status indicator showing a green checkmark.
+2026-05-26 16:29:45,274 | INFO | ✅  Confirming Chat-triggered task appeared in Activity
+2026-05-26 16:29:48,778 | INFO | ✅  Opening Compilance page
+2026-05-26 16:29:49,355 | INFO | ✅  Selecting client and setting download parameters
+2026-05-26 16:29:52,393 | INFO | Compilance: 'Already Downloaded' — GSTR2B already exists for this period; no new task will be queued (treating as PASS)
+2026-05-26 16:29:54,949 | INFO | AI → The notification mentions the period/month of April 2026-27.
+2026-05-26 16:29:54,949 | INFO | ✅  Starting manual GSTR2B download from Compilance
+2026-05-26 16:29:54,949 | INFO | Compilance activity: skipped — GSTR2B was already downloaded, no new task expected in /activity (PASS)
+2026-05-26 16:29:54,950 | INFO | ✅  Confirming Compilance-triggered task appeared in Activity
+2026-05-26 16:30:08,430 | INFO | AI → This page appears to be normal and functional, with no visible errors or broken elements. The page is populated with data, including a profile picture, name, and various sections such as "Tasks", "Skills", and "Recent Activity". All of these sections contain information, indicating that the page is functioning as intended.
+2026-05-26 16:30:08,431 | INFO | ✅  Checking Tara Overview page
+2026-05-26 16:30:17,015 | INFO | AI → The Tasks page of Humonex appears to be functional, with a table displaying scheduled tasks and a sidebar menu for navigation. The page does not show any errors or broken elements, but it is mostly blank, suggesting that there are no tasks currently scheduled or assigned to the user.
+2026-05-26 16:30:17,015 | INFO | ✅  Checking Tasks page
+2026-05-26 16:30:24,034 | INFO | AI → The page appears to be functional, with a list of clients displayed in a table format, but it only shows one client, which may indicate that the data is incomplete or not fully loaded.
+2026-05-26 16:30:24,036 | INFO | ✅  Checking Clients page
+2026-05-26 16:30:30,225 | INFO | AI → The page appears to be blank, with no visible data or content, and does not display any error messages.
+2026-05-26 16:30:30,225 | INFO | ✅  Checking Bulk Reconciliation page
+2026-05-26 16:30:30,306 | INFO | Test complete — success=True, passed=15/15, duration=2m 5s
